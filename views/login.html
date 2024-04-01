@@ -1,0 +1,28 @@
+%include("_header")
+    
+<main>
+
+    <form id="frm_login">
+        <div>
+            <label for="">
+                <span>email</span>
+                <span>2 to 20</span>
+            </label>
+            <input name="user_email" type="text">        
+        </div>
+        <div>
+            <label for="">
+                <span>password</span>
+                <span>6 to 50</span>
+            </label>
+            <input name="user_password" type="text">        
+        </div>
+        <button class="ok" 
+            mix-post="/login" mix-data="#frm_login" mix-default="Login" mix-await="Wait">
+            Login
+        </button>      
+    </form>
+    
+</main>
+
+%include("_footer", url="/login")
